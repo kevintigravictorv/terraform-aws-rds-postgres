@@ -96,5 +96,5 @@ resource "aws_db_instance" "this" {
 
   performance_insights_enabled = "${var.performance_insights_enabled}"
 
-  tags = "${merge(var.additional_tags, local.default_tags)}"
+  tags = "${merge(local.default_tags, var.additional_tags)}"
 }
